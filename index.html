@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANICLOT</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/media.css">
+    <script src="./main.js" defer></script>
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header__container">
+            <div class="header__content flex">
+                <a href="#" class="header__logo" aria-label="Ссылка на наш сайт ANICLOT">
+                    <img class="header__img" src="./img/header-logo.svg" alt="Логотип магазина ANICLOT">
+                </a>
+                <div class="header__menu flex">
+                    <nav class="header__nav nav">
+                        <ul class="header__list list-reset flex">
+                            <li class="header__item">АНИМЕ</li>
+                            <li class="header__item">ФУТБОЛКИ</li>
+                            <li class="header__item">ЛОНГСЛИВЫ</li>
+                            <li class="header__item">ХУДИ</li>
+                            <li class="header__item">ИНФО</li>
+                            <li class="header__item">НОВОСТИ</li>
+                            <li class="header__item">КОНТАКТЫ</li>
+                        </ul>
+                    </nav>
+                    <button class="header__callback header__btn btn-reset" id="headerCallback" type="button">
+                        +7 900 000-00-00
+                    </button>
+                    <button class="header__profile header__btn btn-reset flex" type="button">
+                        <span class="header__profile__mail"> Alexsandеr@gmail.com </span>
+                        <span class="header__profile__balance"> 10 000 бал. </span>
+                    </button>
+                    <div class="header__buttons flex">
+                        <button class="header__btn header__btn-search btn-reset" aria-label="Открыть окно поиска">
+                            <svg class="header__svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M19.7712 18.6663L14.5271 13.4223C15.7004 12.0031 16.4062 10.184 16.4062 8.20313C16.4062 3.67992 12.7263 0 8.20312 0C3.67992 0 0 3.67992 0 8.20313C0 12.7263 3.67992 16.4063 8.20312 16.4063C10.184 16.4063 12.0031 15.7004 13.4223 14.5271L18.6663 19.7712C18.9714 20.0763 19.4661 20.0763 19.7712 19.7712C20.0763 19.4661 20.0763 18.9714 19.7712 18.6663ZM8.20312 14.8438C4.54148 14.8438 1.5625 11.8648 1.5625 8.20313C1.5625 4.54148 4.54148 1.5625 8.20312 1.5625C11.8648 1.5625 14.8438 4.54148 14.8438 8.20313C14.8438 11.8648 11.8648 14.8438 8.20312 14.8438Z" />
+                            </svg>
+                        </button>
+                        <button class="header__btn header__btn-favorites btn-reset"
+                            aria-label="Открыть список избранных товаров">
+                            <svg class="header__svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M14.6875 1.40625C12.3689 1.40625 10.808 2.54559 10 3.34207C9.19203 2.54559 7.63105 1.40625 5.3125 1.40625C2.13746 1.40625 0 3.95703 0 7.08016C0 11.1588 3.87668 13.7266 9.49984 18.4127C9.64469 18.5334 9.82234 18.5937 10 18.5937C10.1777 18.5937 10.3553 18.5334 10.5002 18.4127C16.1221 13.7276 20 11.1589 20 7.08016C20 3.95512 17.8606 1.40625 14.6875 1.40625ZM10 16.7971C4.82988 12.5199 1.5625 10.2438 1.5625 7.08016C1.5625 5.03707 2.85063 2.96875 5.3125 2.96875C6.4109 2.96875 7.41926 3.29922 8.30953 3.95094C8.97473 4.43789 9.33027 4.93676 9.35266 4.96867C9.49727 5.18746 9.73766 5.3191 10 5.3191C10.2623 5.3191 10.5027 5.18746 10.6473 4.96867C10.6697 4.93676 11.0253 4.43789 11.6905 3.95094C12.5807 3.29922 13.5891 2.96875 14.6875 2.96875C17.1494 2.96875 18.4375 5.03707 18.4375 7.08016C18.4375 10.2401 15.1875 12.5054 10 16.7971Z" />
+                            </svg>
+                        </button>
+                        <button class="header__btn header__btn-cart btn-reset" aria-label="Открыть корзину покупок">
+                            <svg class="header__svg" width="18" height="20" viewBox="0 0 18 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16.6562 4.6875H14.2755C13.9652 2.05164 11.7179 0 9 0C6.28215 0 4.0348 2.05164 3.72445 4.6875H1.34375C0.912266 4.6875 0.5625 5.03727 0.5625 5.46875V19.2188C0.5625 19.6502 0.912266 20 1.34375 20H16.6562C17.0877 20 17.4375 19.6502 17.4375 19.2188V5.46875C17.4375 5.03727 17.0877 4.6875 16.6562 4.6875ZM9 1.5625C10.8548 1.5625 12.3992 2.91621 12.6976 4.6875H5.30238C5.60082 2.91621 7.14516 1.5625 9 1.5625ZM15.875 18.4375H2.125V6.25H3.6875V8.59375C3.6875 9.02523 4.03727 9.375 4.46875 9.375C4.90023 9.375 5.25 9.02523 5.25 8.59375V6.25H12.75V8.59375C12.75 9.02523 13.0998 9.375 13.5312 9.375C13.9627 9.375 14.3125 9.02523 14.3125 8.59375V6.25H15.875V18.4375Z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <button class="header__burger-menu btn-reset" type="button"
+                        aria-label="Открыть меню навигации сайта">
+                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 6.5H20M4 12.5H20M4 18.5H20" stroke="white" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container fixed">
+            <div class="fixed__menu menu">
+                <ul class="menu__list  list-reset">
+                    <li class="menu__item">
+                        <button class="menu__profile menu__btn btn-reset">
+                            <svg class="menu__svg" width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_2472_480)">
+                                    <path
+                                        d="M14.9159 11.8744C14.225 10.6805 13.2315 9.67908 12.0428 8.97864C11.5633 8.69604 11.0564 8.46594 10.5315 8.29016C11.6012 7.50464 12.2969 6.2384 12.2969 4.8125C12.2969 2.43457 10.3623 0.5 7.98441 0.5C5.60648 0.5 3.67191 2.43457 3.67191 4.8125C3.67191 6.2384 4.36771 7.50464 5.43729 8.29016C4.91238 8.46594 4.40555 8.69617 3.92606 8.97864C2.73734 9.6792 1.7438 10.6805 1.05289 11.8745C0.940704 12.0681 0.940704 12.3069 1.05289 12.5006C2.44376 14.9039 5.03836 16.5 7.98441 16.5C10.93 16.5 13.5248 14.9044 14.916 12.5006C15.0281 12.3069 15.0281 12.0681 14.9159 11.8744ZM4.92191 4.8125C4.92191 3.12378 6.29568 1.75 7.98441 1.75C9.67313 1.75 11.0469 3.12378 11.0469 4.8125C11.0469 6.50122 9.67313 7.875 7.98441 7.875C6.29568 7.875 4.92191 6.50122 4.92191 4.8125ZM7.98441 15.25C5.69925 15.25 3.5795 14.1018 2.32755 12.1875C2.89676 11.3171 3.66275 10.5847 4.5607 10.0555C5.5939 9.44678 6.77774 9.125 7.98441 9.125C9.19107 9.125 10.3749 9.44678 11.4081 10.0555C12.3061 10.5847 13.0722 11.3173 13.6414 12.1875C12.391 14.0994 10.2722 15.25 7.98441 15.25Z" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_2472_480">
+                                        <rect width="16" height="16" transform="translate(0 0.5)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </button>
+                    </li>
+                    <li class="menu__item">
+                        <button class="menu__search menu__btn btn-reset">
+                            <svg class="menu__svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M19.7712 18.6663L14.5271 13.4223C15.7004 12.0031 16.4062 10.184 16.4062 8.20313C16.4062 3.67992 12.7263 0 8.20312 0C3.67992 0 0 3.67992 0 8.20313C0 12.7263 3.67992 16.4063 8.20312 16.4063C10.184 16.4063 12.0031 15.7004 13.4223 14.5271L18.6663 19.7712C18.9714 20.0763 19.4661 20.0763 19.7712 19.7712C20.0763 19.4661 20.0763 18.9714 19.7712 18.6663ZM8.20312 14.8438C4.54148 14.8438 1.5625 11.8648 1.5625 8.20313C1.5625 4.54148 4.54148 1.5625 8.20312 1.5625C11.8648 1.5625 14.8438 4.54148 14.8438 8.20313C14.8438 11.8648 11.8648 14.8438 8.20312 14.8438Z" />
+                            </svg>
+                        </button>
+                    </li>
+                    <li class="menu__item">
+                        <button class="menu__favorites menu__btn btn-reset">
+                            <svg class="menu__svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M14.6875 1.40625C12.3689 1.40625 10.808 2.54559 10 3.34207C9.19203 2.54559 7.63105 1.40625 5.3125 1.40625C2.13746 1.40625 0 3.95703 0 7.08016C0 11.1588 3.87668 13.7266 9.49984 18.4127C9.64469 18.5334 9.82234 18.5937 10 18.5937C10.1777 18.5937 10.3553 18.5334 10.5002 18.4127C16.1221 13.7276 20 11.1589 20 7.08016C20 3.95512 17.8606 1.40625 14.6875 1.40625ZM10 16.7971C4.82988 12.5199 1.5625 10.2438 1.5625 7.08016C1.5625 5.03707 2.85063 2.96875 5.3125 2.96875C6.4109 2.96875 7.41926 3.29922 8.30953 3.95094C8.97473 4.43789 9.33027 4.93676 9.35266 4.96867C9.49727 5.18746 9.73766 5.3191 10 5.3191C10.2623 5.3191 10.5027 5.18746 10.6473 4.96867C10.6697 4.93676 11.0253 4.43789 11.6905 3.95094C12.5807 3.29922 13.5891 2.96875 14.6875 2.96875C17.1494 2.96875 18.4375 5.03707 18.4375 7.08016C18.4375 10.2401 15.1875 12.5054 10 16.7971Z" />
+                            </svg>
+                        </button>
+                    </li>
+                    <li class="menu__item">
+                        <button class="menu__cart menu__btn btn-reset">
+                            <svg class="menu__svg" width="18" height="20" viewBox="0 0 18 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16.6562 4.6875H14.2755C13.9652 2.05164 11.7179 0 9 0C6.28215 0 4.0348 2.05164 3.72445 4.6875H1.34375C0.912266 4.6875 0.5625 5.03727 0.5625 5.46875V19.2188C0.5625 19.6502 0.912266 20 1.34375 20H16.6562C17.0877 20 17.4375 19.6502 17.4375 19.2188V5.46875C17.4375 5.03727 17.0877 4.6875 16.6562 4.6875ZM9 1.5625C10.8548 1.5625 12.3992 2.91621 12.6976 4.6875H5.30238C5.60082 2.91621 7.14516 1.5625 9 1.5625ZM15.875 18.4375H2.125V6.25H3.6875V8.59375C3.6875 9.02523 4.03727 9.375 4.46875 9.375C4.90023 9.375 5.25 9.02523 5.25 8.59375V6.25H12.75V8.59375C12.75 9.02523 13.0998 9.375 13.5312 9.375C13.9627 9.375 14.3125 9.02523 14.3125 8.59375V6.25H15.875V18.4375Z" />
+                            </svg>
+
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="modal" id="callbackModal">
+            <div class="modal__content flex">
+                <span class="modal__close" id="modalClose"></span>
+                <h2 class="modal__title">Обратный звонок</h2>
+                <form class="modal__form flex" method="post">
+                    <input type="text" name="name" class="modal__input" placeholder="Имя" required>
+                    <input type="tel" name="telephone" class="modal__input modal__input-phone"
+                        placeholder="Номер телефона" required>
+                    <button class="modal__btn btn-reset" type="submit">ОТПРАВИТЬ </button>
+                </form>
+                <p class="modal__text">
+                    Нажимая кнопку, вы&nbsp;соглашаетесь с&nbsp;обработкой ваших персональных данных
+                </p>
+            </div>
+        </div>
+        <div class="hero">
+            <div class="container hero__container">
+                <div class="hero__content">
+                    <div id="heroCarousel" class="hero__carousel carousel slide bg-inverse ms-auto me-auto"
+                        data-bs-ride="carousel">
+                        <ol class="hero__indicators carousel-indicators list-reset">
+                            <li data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></li>
+                            <li data-bs-target="#heroCarousel" data-bs-slide-to="1"></li>
+                            <li data-bs-target="#heroCarousel" data-bs-slide-to="2"></li>
+                        </ol>
+                        <div class="hero__inner carousel-inner" role="listbox">
+                            <div class="carousel-item hero__item hero__item-1 active">>
+                            </div>
+                            <div class="carousel-item hero__item hero__item-2">
+                            </div>
+                            <div class="carousel-item hero__item hero__item-3">
+                            </div>
+                        </div>
+                        <a class="hero__btn-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+                            <span class="visually-hidden">Предыдущий</span>
+                        </a>
+                        <a class="hero__btn-next" href="#heroCarousel" role="button" data-bs-slide="next">
+                            <span class="visually-hidden">Следующий</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="news">
+            <div class="container news__container">
+                <div class="news__content">
+                    <h2 class="news__title section-title">
+                        Новинки
+                    </h2>
+                    <button class="news__btn-more btn btn-reset">
+                        ВСЕ НОВИНКИ
+                    </button>
+                    <div class="news__carousel-lg">
+                        <ul class="news__inner list-reset row" id="news__inner">
+                            <li class="news__item col-xl-3 col-lg-4 col-md-6">
+                                <div class="news__item-content">
+                                    <span class="news__descr">
+                                        NEW!
+                                    </span>
+                                    <button class="news__btn btn-reset">
+                                        <svg class="news__svg" width="20" height="18" viewBox="0 0 20 18" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M14.6875 0.40625C12.3689 0.40625 10.808 1.54559 10 2.34207C9.19203 1.54559 7.63105 0.40625 5.3125 0.40625C2.13746 0.40625 0 2.95703 0 6.08016C0 10.1588 3.87668 12.7266 9.49984 17.4127C9.64469 17.5334 9.82234 17.5937 10 17.5937C10.1777 17.5937 10.3553 17.5334 10.5002 17.4127C16.1221 12.7276 20 10.1589 20 6.08016C20 2.95512 17.8606 0.40625 14.6875 0.40625ZM10 15.7971C4.82988 11.5199 1.5625 9.24379 1.5625 6.08016C1.5625 4.03707 2.85063 1.96875 5.3125 1.96875C6.4109 1.96875 7.41926 2.29922 8.30953 2.95094C8.97473 3.43789 9.33027 3.93676 9.35266 3.96867C9.49727 4.18746 9.73766 4.3191 10 4.3191C10.2623 4.3191 10.5027 4.18746 10.6473 3.96867C10.6697 3.93676 11.0253 3.43789 11.6905 2.95094C12.5807 2.29922 13.5891 1.96875 14.6875 1.96875C17.1494 1.96875 18.4375 4.03707 18.4375 6.08016C18.4375 9.24012 15.1875 11.5054 10 15.7971Z" />
+                                        </svg>
+                                    </button>
+                                    <img class="news__img" src="./img/news-1.png"
+                                        alt="Изображение футбоки с принтом из аниме 'Клинок рассекающий демонов'">
+                                    <p class="news__from">
+                                        КЛИНОК РАССЕКАЮЩИЙ ДЕМОНОВ
+                                    </p>
+                                    <p class="news__text">
+                                        Футболка аниме клинок рассекающий демонов, чёрный цвет, 46 размер, 100% хлопок
+                                    </p>
+                                    <div class="news__value flex">
+                                        <span class="news__price">
+                                            10&nbsp;000&nbsp;₽
+                                        </span>
+                                        <span class="news__discount">
+                                            20&nbsp;000&nbsp;₽
+                                        </span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="news__item col-xl-3 col-lg-4 col-md-6">
+                                <div class="news__item-content">
+                                    <span class="news__descr">
+                                        NEW!
+                                    </span>
+                                    <button class="news__btn btn-reset">
+                                        <svg class="news__svg" width="20" height="18" viewBox="0 0 20 18" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M14.6875 0.40625C12.3689 0.40625 10.808 1.54559 10 2.34207C9.19203 1.54559 7.63105 0.40625 5.3125 0.40625C2.13746 0.40625 0 2.95703 0 6.08016C0 10.1588 3.87668 12.7266 9.49984 17.4127C9.64469 17.5334 9.82234 17.5937 10 17.5937C10.1777 17.5937 10.3553 17.5334 10.5002 17.4127C16.1221 12.7276 20 10.1589 20 6.08016C20 2.95512 17.8606 0.40625 14.6875 0.40625ZM10 15.7971C4.82988 11.5199 1.5625 9.24379 1.5625 6.08016C1.5625 4.03707 2.85063 1.96875 5.3125 1.96875C6.4109 1.96875 7.41926 2.29922 8.30953 2.95094C8.97473 3.43789 9.33027 3.93676 9.35266 3.96867C9.49727 4.18746 9.73766 4.3191 10 4.3191C10.2623 4.3191 10.5027 4.18746 10.6473 3.96867C10.6697 3.93676 11.0253 3.43789 11.6905 2.95094C12.5807 2.29922 13.5891 1.96875 14.6875 1.96875C17.1494 1.96875 18.4375 4.03707 18.4375 6.08016C18.4375 9.24012 15.1875 11.5054 10 15.7971Z" />
+                                        </svg>
+                                    </button>
+                                    <img class="news__img" src="./img/news-2.png"
+                                        alt="Изображение футболки с принтом из аниме 'Магическая битва'">
+                                    <p class="news__from">
+                                        МАГИЧЕСКАЯ БИТВА
+                                    </p>
+                                    <p class="news__text">
+                                        Футболка Магическая битва
+                                    </p>
+                                    <div class="news__value flex">
+                                        <span class="news__price">
+                                            10&nbsp;000&nbsp;₽
+                                        </span>
+                                        <span class="news__discount">
+                                            20&nbsp;000&nbsp;₽
+                                        </span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="news__item col-xl-3 col-lg-4 col-md-6">
+                                <div class="news__item-content">
+                                    <span class="news__descr">
+                                        NEW!
+                                    </span>
+                                    <button class="news__btn btn-reset">
+                                        <svg class="news__svg" width="20" height="18" viewBox="0 0 20 18" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M14.6875 0.40625C12.3689 0.40625 10.808 1.54559 10 2.34207C9.19203 1.54559 7.63105 0.40625 5.3125 0.40625C2.13746 0.40625 0 2.95703 0 6.08016C0 10.1588 3.87668 12.7266 9.49984 17.4127C9.64469 17.5334 9.82234 17.5937 10 17.5937C10.1777 17.5937 10.3553 17.5334 10.5002 17.4127C16.1221 12.7276 20 10.1589 20 6.08016C20 2.95512 17.8606 0.40625 14.6875 0.40625ZM10 15.7971C4.82988 11.5199 1.5625 9.24379 1.5625 6.08016C1.5625 4.03707 2.85063 1.96875 5.3125 1.96875C6.4109 1.96875 7.41926 2.29922 8.30953 2.95094C8.97473 3.43789 9.33027 3.93676 9.35266 3.96867C9.49727 4.18746 9.73766 4.3191 10 4.3191C10.2623 4.3191 10.5027 4.18746 10.6473 3.96867C10.6697 3.93676 11.0253 3.43789 11.6905 2.95094C12.5807 2.29922 13.5891 1.96875 14.6875 1.96875C17.1494 1.96875 18.4375 4.03707 18.4375 6.08016C18.4375 9.24012 15.1875 11.5054 10 15.7971Z" />
+                                        </svg>
+                                    </button>
+                                    <img class="news__img" src="./img/news-3.png"
+                                        alt="Изображение футболки с принтом из аниме 'Клинок рассекающий демонов'">
+                                    <p class="news__from">
+                                        КЛИНОК РАССЕКАЮЩИЙ ДЕМОНОВ
+                                    </p>
+                                    <p class="news__text">
+                                        Футболка аниме клинок рассекающий демонов, чёрный цвет, 46 размер, 100% хлопок
+                                    </p>
+                                    <div class="news__value flex">
+                                        <span class="news__price">
+                                            10&nbsp;000&nbsp;₽
+                                        </span>
+                                        <span class="news__discount">
+                                            20&nbsp;000&nbsp;₽
+                                        </span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="news__item col-xl-3 col-lg-4 col-md-6">
+                                <div class="news__item-content">
+                                    <span class="news__descr">
+                                        NEW!
+                                    </span>
+                                    <button class="news__btn btn-reset">
+                                        <svg class="news__svg" width="20" height="18" viewBox="0 0 20 18" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M14.6875 0.40625C12.3689 0.40625 10.808 1.54559 10 2.34207C9.19203 1.54559 7.63105 0.40625 5.3125 0.40625C2.13746 0.40625 0 2.95703 0 6.08016C0 10.1588 3.87668 12.7266 9.49984 17.4127C9.64469 17.5334 9.82234 17.5937 10 17.5937C10.1777 17.5937 10.3553 17.5334 10.5002 17.4127C16.1221 12.7276 20 10.1589 20 6.08016C20 2.95512 17.8606 0.40625 14.6875 0.40625ZM10 15.7971C4.82988 11.5199 1.5625 9.24379 1.5625 6.08016C1.5625 4.03707 2.85063 1.96875 5.3125 1.96875C6.4109 1.96875 7.41926 2.29922 8.30953 2.95094C8.97473 3.43789 9.33027 3.93676 9.35266 3.96867C9.49727 4.18746 9.73766 4.3191 10 4.3191C10.2623 4.3191 10.5027 4.18746 10.6473 3.96867C10.6697 3.93676 11.0253 3.43789 11.6905 2.95094C12.5807 2.29922 13.5891 1.96875 14.6875 1.96875C17.1494 1.96875 18.4375 4.03707 18.4375 6.08016C18.4375 9.24012 15.1875 11.5054 10 15.7971Z" />
+                                        </svg>
+                                    </button>
+                                    <img class="news__img" src="./img/news-4.png"
+                                        alt="Изображение футболки с принтом из аниме 'Магическаяя битва'">
+                                    <p class="news__from">
+                                        МАГИЧЕСКАЯ БИТВА
+                                    </p>
+                                    <p class="news__text">
+                                        Футболка Магическая Битва
+                                    </p>
+                                    <div class="news__value flex">
+                                        <span class="news__price">
+                                            10&nbsp;000&nbsp;₽
+                                        </span>
+                                        <span class="news__discount">
+                                            20&nbsp;000&nbsp;₽
+                                        </span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <button class="news__btn-prev btn-reset" id="news__btn-prev" disabled></button>
+                        <button class="news__btn-next btn-reset" id="news__btn-next" disabled></button>
+                    </div>
+                    <div class="news__carousel-sm">
+                        <div id="newsCarousel" class="carousel slide bg-inverse ms-auto me-auto"
+                            data-bs-ride="carousel">
+                            <div class="news__inner carousel-inner" role="listbox">
+                                <div class="carousel-item active">
+                                    <div class="news__item-content">
+                                        <span class="news__descr">
+                                            NEW!
+                                        </span>
+                                        <button class="news__btn btn-reset">
+                                            <svg class="news__svg" width="20" height="18" viewBox="0 0 20 18"
+                                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M14.6875 0.40625C12.3689 0.40625 10.808 1.54559 10 2.34207C9.19203 1.54559 7.63105 0.40625 5.3125 0.40625C2.13746 0.40625 0 2.95703 0 6.08016C0 10.1588 3.87668 12.7266 9.49984 17.4127C9.64469 17.5334 9.82234 17.5937 10 17.5937C10.1777 17.5937 10.3553 17.5334 10.5002 17.4127C16.1221 12.7276 20 10.1589 20 6.08016C20 2.95512 17.8606 0.40625 14.6875 0.40625ZM10 15.7971C4.82988 11.5199 1.5625 9.24379 1.5625 6.08016C1.5625 4.03707 2.85063 1.96875 5.3125 1.96875C6.4109 1.96875 7.41926 2.29922 8.30953 2.95094C8.97473 3.43789 9.33027 3.93676 9.35266 3.96867C9.49727 4.18746 9.73766 4.3191 10 4.3191C10.2623 4.3191 10.5027 4.18746 10.6473 3.96867C10.6697 3.93676 11.0253 3.43789 11.6905 2.95094C12.5807 2.29922 13.5891 1.96875 14.6875 1.96875C17.1494 1.96875 18.4375 4.03707 18.4375 6.08016C18.4375 9.24012 15.1875 11.5054 10 15.7971Z" />
+                                            </svg>
+                                        </button>
+                                        <img class="news__img" src="./img/news-1.png"
+                                            alt="Изображение футбоки с принтом из аниме 'Клинок рассекающий демонов'">
+                                        <p class="news__from">
+                                            КЛИНОК РАССЕКАЮЩИЙ ДЕМОНОВ
+                                        </p>
+                                        <p class="news__text">
+                                            Футболка аниме клинок рассекающий демонов, чёрный цвет, 46 размер, 100%
+                                            хлопок
+                                        </p>
+                                        <div class="news__value flex">
+                                            <span class="news__price">
+                                                10&nbsp;000&nbsp;₽
+                                            </span>
+                                            <span class="news__discount">
+                                                20&nbsp;000&nbsp;₽
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="news__item-content">
+                                        <span class="news__descr">
+                                            NEW!
+                                        </span>
+                                        <button class="news__btn btn-reset">
+                                            <svg class="news__svg" width="20" height="18" viewBox="0 0 20 18"
+                                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M14.6875 0.40625C12.3689 0.40625 10.808 1.54559 10 2.34207C9.19203 1.54559 7.63105 0.40625 5.3125 0.40625C2.13746 0.40625 0 2.95703 0 6.08016C0 10.1588 3.87668 12.7266 9.49984 17.4127C9.64469 17.5334 9.82234 17.5937 10 17.5937C10.1777 17.5937 10.3553 17.5334 10.5002 17.4127C16.1221 12.7276 20 10.1589 20 6.08016C20 2.95512 17.8606 0.40625 14.6875 0.40625ZM10 15.7971C4.82988 11.5199 1.5625 9.24379 1.5625 6.08016C1.5625 4.03707 2.85063 1.96875 5.3125 1.96875C6.4109 1.96875 7.41926 2.29922 8.30953 2.95094C8.97473 3.43789 9.33027 3.93676 9.35266 3.96867C9.49727 4.18746 9.73766 4.3191 10 4.3191C10.2623 4.3191 10.5027 4.18746 10.6473 3.96867C10.6697 3.93676 11.0253 3.43789 11.6905 2.95094C12.5807 2.29922 13.5891 1.96875 14.6875 1.96875C17.1494 1.96875 18.4375 4.03707 18.4375 6.08016C18.4375 9.24012 15.1875 11.5054 10 15.7971Z" />
+                                            </svg>
+                                        </button>
+                                        <img class="news__img" src="./img/news-2.png"
+                                            alt="Изображение футболки с принтом из аниме 'Магическая битва'">
+                                        <p class="news__from">
+                                            МАГИЧЕСКАЯ БИТВА
+                                        </p>
+                                        <p class="news__text">
+                                            Футболка Магическая битва
+                                        </p>
+                                        <div class="news__value flex">
+                                            <span class="news__price">
+                                                10&nbsp;000&nbsp;₽
+                                            </span>
+                                            <span class="news__discount">
+                                                20&nbsp;000&nbsp;₽
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="news__item-content">
+                                        <span class="news__descr">
+                                            NEW!
+                                        </span>
+                                        <button class="news__btn btn-reset">
+                                            <svg class="news__svg" width="20" height="18" viewBox="0 0 20 18"
+                                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M14.6875 0.40625C12.3689 0.40625 10.808 1.54559 10 2.34207C9.19203 1.54559 7.63105 0.40625 5.3125 0.40625C2.13746 0.40625 0 2.95703 0 6.08016C0 10.1588 3.87668 12.7266 9.49984 17.4127C9.64469 17.5334 9.82234 17.5937 10 17.5937C10.1777 17.5937 10.3553 17.5334 10.5002 17.4127C16.1221 12.7276 20 10.1589 20 6.08016C20 2.95512 17.8606 0.40625 14.6875 0.40625ZM10 15.7971C4.82988 11.5199 1.5625 9.24379 1.5625 6.08016C1.5625 4.03707 2.85063 1.96875 5.3125 1.96875C6.4109 1.96875 7.41926 2.29922 8.30953 2.95094C8.97473 3.43789 9.33027 3.93676 9.35266 3.96867C9.49727 4.18746 9.73766 4.3191 10 4.3191C10.2623 4.3191 10.5027 4.18746 10.6473 3.96867C10.6697 3.93676 11.0253 3.43789 11.6905 2.95094C12.5807 2.29922 13.5891 1.96875 14.6875 1.96875C17.1494 1.96875 18.4375 4.03707 18.4375 6.08016C18.4375 9.24012 15.1875 11.5054 10 15.7971Z" />
+                                            </svg>
+                                        </button>
+                                        <img class="news__img" src="./img/news-3.png"
+                                            alt="Изображение футболки с принтом из аниме 'Клинок рассекающий демонов'">
+                                        <p class="news__from">
+                                            КЛИНОК РАССЕКАЮЩИЙ ДЕМОНОВ
+                                        </p>
+                                        <p class="news__text">
+                                            Футболка аниме клинок рассекающий демонов, чёрный цвет, 46 размер, 100%
+                                            хлопок
+                                        </p>
+                                        <div class="news__value flex">
+                                            <span class="news__price">
+                                                10&nbsp;000&nbsp;₽
+                                            </span>
+                                            <span class="news__discount">
+                                                20&nbsp;000&nbsp;₽
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="news__item-content">
+                                        <span class="news__descr">
+                                            NEW!
+                                        </span>
+                                        <button class="news__btn btn-reset">
+                                            <svg class="news__svg" width="20" height="18" viewBox="0 0 20 18"
+                                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M14.6875 0.40625C12.3689 0.40625 10.808 1.54559 10 2.34207C9.19203 1.54559 7.63105 0.40625 5.3125 0.40625C2.13746 0.40625 0 2.95703 0 6.08016C0 10.1588 3.87668 12.7266 9.49984 17.4127C9.64469 17.5334 9.82234 17.5937 10 17.5937C10.1777 17.5937 10.3553 17.5334 10.5002 17.4127C16.1221 12.7276 20 10.1589 20 6.08016C20 2.95512 17.8606 0.40625 14.6875 0.40625ZM10 15.7971C4.82988 11.5199 1.5625 9.24379 1.5625 6.08016C1.5625 4.03707 2.85063 1.96875 5.3125 1.96875C6.4109 1.96875 7.41926 2.29922 8.30953 2.95094C8.97473 3.43789 9.33027 3.93676 9.35266 3.96867C9.49727 4.18746 9.73766 4.3191 10 4.3191C10.2623 4.3191 10.5027 4.18746 10.6473 3.96867C10.6697 3.93676 11.0253 3.43789 11.6905 2.95094C12.5807 2.29922 13.5891 1.96875 14.6875 1.96875C17.1494 1.96875 18.4375 4.03707 18.4375 6.08016C18.4375 9.24012 15.1875 11.5054 10 15.7971Z" />
+                                            </svg>
+                                        </button>
+                                        <img class="news__img" src="./img/news-4.png"
+                                            alt="Изображение футболки с принтом из аниме 'Магическаяя битва'">
+                                        <p class="news__from">
+                                            МАГИЧЕСКАЯ БИТВА
+                                        </p>
+                                        <p class="news__text">
+                                            Футболка Магическая Битва
+                                        </p>
+                                        <div class="news__value flex">
+                                            <span class="news__price">
+                                                10&nbsp;000&nbsp;₽
+                                            </span>
+                                            <span class="news__discount">
+                                                20&nbsp;000&nbsp;₽
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <ol class="news__carousel__indicators carousel-indicators list-reset">
+                                    <li data-bs-target="#newsCarousel" data-bs-slide-to="0" class="active"></li>
+                                    <li data-bs-target="#newsCarousel" data-bs-slide-to="1"></li>
+                                    <li data-bs-target="#newsCarousel" data-bs-slide-to="2"></li>
+                                    <li data-bs-target="#newsCarousel" data-bs-slide-to="3"></li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="collection">
+            <div class="container collection__container">
+                <div class="collection__content">
+                    <ul class="collection__list collection__list-1 list-reset flex row">
+                        <li class="collection__item col-xl-3 col-sm-4 col-12">
+                            <div class="collection__item-content item-1">
+                                <span class="collection__span">
+                                    КОЛЛЕКЦИЯ
+                                </span>
+                                <p class="collection__text">
+                                    Магическая битва
+                                </p>
+                                <button class="collection__btn btn-reset" type="button"></button>
+                            </div>
+                        </li>
+                        <li class="collection__item  col-xl-3 col-sm-4">
+                            <div class="collection__item-content item-2">
+                                <span class="collection__span">
+                                    КОЛЛЕКЦИЯ
+                                </span>
+                                <p class="collection__text">
+                                    Человек&nbsp;&mdash; бензопила
+                                </p>
+                                <button class="collection__btn btn-reset" type="button"></button>
+                            </div>
+                        </li>
+                        <li class="collection__item  col-xl-3 col-sm-4">
+                            <div class="collection__item-content item-3">
+                                <span class="collection__span">
+                                    КОЛЛЕКЦИЯ
+                                </span>
+                                <p class="collection__text">
+                                    Евангелион
+                                </p>
+                                <button class="collection__btn btn-reset" type="button"></button>
+                            </div>
+                        </li>
+                        <li class="collection__item col-xl-3 col-sm-4 collection__item-big">
+                            <div class="collection__item-content item-4 collection__item-big">
+                                <span class="collection__span">
+                                    КОЛЛЕКЦИЯ
+                                </span>
+                                <p class="collection__text collection__text-big">
+                                    Клинок рассекающий демонов
+                                </p>
+                                <button class="collection__btn btn-reset" type="button"></button>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="collection__descr flex">
+                        <h2 class="collection__title">
+                            Популярные коллекции
+                        </h2>
+                        <button class="collection__btn-main btn-reset">
+                            ВСЕ КОЛЛЕКЦИИ
+                        </button>
+                    </div>
+                    <ul class="collection__list collection__list-2 list-reset flex row">
+                        <li class="collection__item col-xl-3 col-sm-4">
+                            <div class="collection__item-content item-5 collection__item-big">
+                                <span class="collection__span">
+                                    КОЛЛЕКЦИЯ
+                                </span>
+                                <p class="collection__text collection__text-big">
+                                    Клинок рассекающий демонов
+                                </p>
+                                <button class="collection__btn btn-reset" type="button"></button>
+                            </div>
+                        </li>
+                        <li class="collection__item-help collection__item-help-1 collection__item col-sm-4"></li>
+                        <li class="collection__item-help collection__item col-sm-4"></li>
+                        <li class="collection__item col-xl-3 col-sm-4">
+                            <div class="collection__item-content item-6">
+                                <span class="collection__span">
+                                    КОЛЛЕКЦИЯ
+                                </span>
+                                <p class="collection__text">
+                                    Моя геройская академия
+                                </p>
+                                <button class="collection__btn btn-reset" type="button"></button>
+                            </div>
+                        </li>
+                        <li class="collection__item col-xl-3 col-sm-4">
+                            <div class="collection__item-content item-7">
+                                <span class="collection__span">
+                                    КОЛЛЕКЦИЯ
+                                </span>
+                                <p class="collection__text">
+                                    Блич
+                                </p>
+                                <button class="collection__btn btn-reset" type="button"></button>
+                            </div>
+                        </li>
+                        <li class="collection__item col-xl-3 col-sm-4">
+                            <div class="collection__item-content item-8">
+                                <span class="collection__span">
+                                    КОЛЛЕКЦИЯ
+                                </span>
+                                <p class="collection__text">
+                                    One-Punch Man
+                                </p>
+                                <button class="collection__btn btn-reset" type="button"></button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
